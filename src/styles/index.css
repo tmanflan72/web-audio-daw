@@ -1,0 +1,9 @@
+/* Place global styles and import component styles here. */
+@import './AICodeGenerator.css';
+@import './AetheriaVocalForge.css';
+
+body {
+  background: #18181b;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}

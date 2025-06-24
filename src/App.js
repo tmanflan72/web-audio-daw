@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import AetheriaVocalForge from './daw/AetheriaVocalForge';
 import AICodeGenerator from './components/AICodeGenerator';
+import AetheriaVocalForge from './daw/AetheriaVocalForge';
 import { Code, Music } from 'lucide-react';
+import './styles/index.css';
 
 function App() {
   const [currentView, setCurrentView] = useState('daw');

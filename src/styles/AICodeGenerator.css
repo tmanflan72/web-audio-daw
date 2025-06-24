@@ -1,0 +1,7 @@
+/* Place component-specific styles for AI Code Generator here. */
+
+.generator-container {
+  background: #232136;
+  border-radius: 1rem;
+  padding: 2rem;
+}

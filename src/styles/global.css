@@ -1,0 +1,7 @@
+/* Place global or component-specific styles here. */
+
+body {
+  background: #18181b;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}

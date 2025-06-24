@@ -16,6 +16,45 @@ A comprehensive audio production suite featuring:
 - Production-ready code with proper error handling
 - Real-time code execution and testing
 
+## Project Structure
+
+```
+app.js
+README.md
+src/
+  daw/
+    AetheriaVocalForge.js
+  components/
+    AICodeGenerator.js
+  utils/
+    index.js
+    codegen.js
+  styles/
+    index.css
+    AICodeGenerator.css
+    AetheriaVocalForge.css
+  assets/
+    (static files)
+tests/
+  example.test.js
+  README.md
+package-lock.json
+```
+
+## Getting Started
+
+```bash
+npm install
+npm start
+```
+
+## Contribution Guidelines
+- Organize new features in `src/components` or `src/daw` as appropriate.
+- Place shared utilities in `src/utils`.
+- Add tests in the `tests` folder.
+- Add styles in `src/styles`.
+- Place static assets in `src/assets`.
+
 ## Features
 
 ### DAW Features
@@ -31,10 +70,3 @@ A comprehensive audio production suite featuring:
 - 🔧 Multiple programming languages supported
 - 📝 Code history and examples
 - 💾 Download and copy functionality
-
-## Getting Started
-
-```bash
-npm install
-npm start# web-audio-daw
-"Professional Digital Audio Workstation built with React and Web Audio API"

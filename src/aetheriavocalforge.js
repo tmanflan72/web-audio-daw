@@ -1,3 +1,5 @@
+// This file has been moved to src/daw/AetheriaVocalForge.js for better organization.
+
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Play, Pause, Upload, Download, Settings, Zap, Eye, Mic, Activity, Cpu, Brain, Volume2, RotateCcw, Save } from 'lucide-react';
 
@@ -126,7 +128,7 @@ const AetheriaVocalForge = () => {
       output: outputGain,
       highpass,
       lowpass,
-      deReverbConvolver,
+      deReVerbConvolver,
       compressor,
       deEsser,
       enhancer
