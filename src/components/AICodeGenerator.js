@@ -10,74 +10,6 @@ const AICodeGenerator = () => {
   const [executionResult, setExecutionResult] = useState('');
   const [codeHistory, setCodeHistory] = useState([]);
   const [analysisResult, setAnalysisResult] = useState('');
-  
-  // Advanced pattern recognition for code generation
-  const codePatterns = {
-    function: {
-      javascript: {
-        patterns: [
-          {
-            keywords: ['calculate', 'compute', 'math', 'formula'],
-            template: function(name, params, logic) {
-              return "function " + name + "(" + params.join(', ') + ") {\n  " + logic + "\n  return result;\n}";
-            }
-          },
-          {
-            keywords: ['validate', 'check', 'verify'],
-            template: function(name, params, logic) {
-              return "function " + name + "(" + params.join(', ') + ") {\n  " + logic + "\n  return isValid;\n}";
-            }
-          },
-          {
-            keywords: ['transform', 'convert', 'format'],
-            template: function(name, params, logic) {
-              return "function " + name + "(" + params.join(', ') + ") {\n  " + logic + "\n  return transformed;\n}";
-            }
-          },
-          {
-            keywords: ['filter', 'search', 'find'],
-            template: function(name, params, logic) {
-              return "function " + name + "(" + params.join(', ') + ") {\n  " + logic + "\n  return filtered;\n}";
-            }
-          }
-        ]
-      },
-      python: {
-        patterns: [
-          {
-            keywords: ['calculate', 'compute', 'math'],
-            template: function(name, params, logic) {
-              return "def " + name + "(" + params.join(', ') + "):\n    " + logic.split('\n').join('\n    ') + "\n    return result";
-            }
-          }
-        ]
-      }
-    },
-    component: {
-      react: {
-        patterns: [
-          {
-            keywords: ['button', 'click', 'interactive'],
-            template: function(name, props, logic) {
-              return "import React, { useState } from 'react';\n\nconst " + name + " = ({ " + props.join(', ') + " }) => {\n  " + logic + "\n  \n  return (\n    <div>\n      {/* Component JSX */}\n    </div>\n  );\n};\n\nexport default " + name + ";";
-            }
-          }
-        ]
-      }
-    },
-    effect: {
-      audio: {
-        patterns: [
-          {
-            keywords: ['reverb', 'echo', 'delay'],
-            template: function(name, params, logic) {
-              return "class " + name + "Effect {\n  constructor(audioContext) {\n    this.audioContext = audioContext;\n    " + logic + "\n  }\n  \n  process(input) {\n    " + (params.includes('feedback') ? 'const feedback = this.feedbackGain.gain.value;' : '') + "\n    return this.output;\n  }\n}";
-            }
-          }
-        ]
-      }
-    }
-  };
 
   // Natural language processing for code generation
   const processNaturalLanguage = (description) => {
@@ -346,7 +278,7 @@ const AICodeGenerator = () => {
       };
       
     } catch (error) {
-      console.warn(\`Attempt \${attempt} failed:`, error.message);
+      console.warn(\`Attempt \${attempt} failed:\`, error.message);
       
       if (attempt === config.retries) {
         return {
